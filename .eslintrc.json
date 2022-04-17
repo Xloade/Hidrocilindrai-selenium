@@ -1,0 +1,40 @@
+{
+
+    "plugins": [
+        "wdio",
+        "jest"
+    ],
+    "env": {
+        "jest/globals": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:wdio/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "requireConfigFile": false
+    },
+    "rules": {
+        // override/add rules settings here, such as:
+        // 'vue/no-unused-vars': 'error'
+        "vue/multi-word-component-names": 0,
+        "indent": [ 2, 2,
+            {
+                "MemberExpression": 1,
+                "ObjectExpression": 1
+            }
+        ],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "wdio.conf.js"
+    ]
+}
