@@ -32,6 +32,6 @@ async function waitTillHTMLRendered(timeout = 30000) {
     }
   })
 }
-module.exports = { // eslint-disable-line
+module.exports = {
   waitTillHTMLRendered: waitTillHTMLRendered,
 }

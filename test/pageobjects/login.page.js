@@ -1,5 +1,3 @@
-
-
 import Page from './page'
 
 class LoginPage extends Page {
@@ -20,7 +18,7 @@ class LoginPage extends Page {
   }
 
   async login (username, password) {
-    await this.inputUsername.setValue(username)
+    await this.inputEmail.setValue(username)
     await this.inputPassword.setValue(password)
     await this.btnSubmit.click()
   }
