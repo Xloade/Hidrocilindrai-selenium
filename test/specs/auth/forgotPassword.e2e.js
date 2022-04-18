@@ -1,7 +1,7 @@
 import ForgotPassword from '../../pageobjects/auth/forgotPassword.page'
 import Faker from 'faker'
 
-describe('New user register', function () {
+describe('Forgot password page', function () {
   let email
   before(function () {
     email = Faker.internet.email()

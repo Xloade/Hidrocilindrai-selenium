@@ -1,7 +1,7 @@
 import RegisterPage from '../../pageobjects/auth/register.page'
 import Faker from 'faker'
 
-describe('New user register', function () {
+describe('New user register page', function () {
   let email
   let name
   let password

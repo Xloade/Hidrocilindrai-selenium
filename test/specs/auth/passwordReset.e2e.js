@@ -1,7 +1,7 @@
 import PasswordReset from '../../pageobjects/auth/passwordReset.page'
 import Faker from 'faker'
 
-describe('New user register', function () {
+describe('Password reset page', function () {
   let token
   let email
   let password
