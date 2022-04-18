@@ -1,6 +1,5 @@
 import RegisterPage from '../../pageobjects/register.page'
 import Faker from 'faker'
-import pageLoaded from '../../tools/pageLoaded'
 
 describe('New user register', function () {
   let email
@@ -28,8 +27,12 @@ describe('New user register', function () {
   it('should register with correct password', async function () {
     await RegisterPage.open()
     await RegisterPage.register(email, name, password, password)
-    await pageLoaded.waitTillHTMLRendered()
-    await expect(await browser.getTitle()).toBe('Dashboard')
+    await browser.waitUntil(
+      async () => (await browser.getTitle()) === 'Dashboard',
+      {
+        timeout: 10000,
+      }
+    )
   })
   it('shouldn\'t register with same email', async function () {
     await browser.deleteCookies('laravel_session')
