@@ -1,4 +1,4 @@
-import Page from './page'
+import Page from '../page'
 
 class RegisterPage extends Page {
   get inputEmail () {

@@ -1,4 +1,4 @@
-import LoginPage from '../../pageobjects/login.page'
+import LoginPage from '../../pageobjects/auth/login.page'
 
 describe('Login page', function () {
   it('shouldn\'t login with invalid credentials', async function () {

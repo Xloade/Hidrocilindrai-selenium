@@ -1,4 +1,4 @@
-import ForgotPassword from '../../pageobjects/forgotPassword.page'
+import ForgotPassword from '../../pageobjects/auth/forgotPassword.page'
 import Faker from 'faker'
 
 describe('New user register', function () {

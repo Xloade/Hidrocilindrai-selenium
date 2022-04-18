@@ -1,4 +1,4 @@
-import RegisterPage from '../../pageobjects/register.page'
+import RegisterPage from '../../pageobjects/auth/register.page'
 import Faker from 'faker'
 
 describe('New user register', function () {
