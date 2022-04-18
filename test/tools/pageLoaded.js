@@ -1,6 +1,6 @@
 /*eslint-env browser*/
 //from https://stackoverflow.com/a/61304202/18474817
-async function waitTillHTMLRendered(timeout = 30000) {
+export async function waitTillHTMLRendered(timeout = 30000) {
   const puppeteerBrowser = await browser.getPuppeteer()
   await browser.call(async () => {
     const pages = await puppeteerBrowser.pages()
@@ -31,7 +31,4 @@ async function waitTillHTMLRendered(timeout = 30000) {
       await page.waitForTimeout(checkDurationMsecs)
     }
   })
-}
-module.exports = {
-  waitTillHTMLRendered: waitTillHTMLRendered,
 }
