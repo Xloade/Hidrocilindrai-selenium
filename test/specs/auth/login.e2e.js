@@ -1,7 +1,7 @@
-import LoginPage from '../pageobjects/login.page'
-import pageLoaded from '../tools/pageLoaded'
+import LoginPage from '../../pageobjects/login.page'
+import pageLoaded from '../../tools/pageLoaded'
 
-describe('My Login application', function () {
+describe('Login page', function () {
   it('shouldn\'t login with invalid credentials', async function () {
     await LoginPage.open()
     await LoginPage.login('aaaaadmin@gmail.com', 'aaaadmin')
@@ -12,5 +12,7 @@ describe('My Login application', function () {
     await LoginPage.login('admin@gmail.com', 'admin')
     await pageLoaded.waitTillHTMLRendered()
     await expect(await browser.getTitle()).toBe('Dashboard')
+
+    
   })
 })
