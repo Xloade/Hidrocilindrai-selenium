@@ -1,6 +1,6 @@
 import Page from '../page'
 
-class LoginPage extends Page { 
+class CylinderPage extends Page { 
   get alert() {
     return $('.my-alert')
   }
@@ -29,7 +29,7 @@ class LoginPage extends Page {
       await this.btnAdd.click()
       await browser.waitUntil(async () => (await this.btnRemove.isExisting() === true))
       // sadly there is small delay before new list is rendered so need to wait
-      await browser.pause(100)
+      await browser.pause(200)
       index++
     }
   }
@@ -39,14 +39,6 @@ class LoginPage extends Page {
     await browser.waitUntil(async () => (await this.btnRemove.isExisting() === true))
     await this.btnRemove.click()
   }
-
-  async removeFromFirstGroup() {
-    
-  }
-
-  open () {
-    return super.open('cylinders')
-  }
 }
 
-export default new LoginPage()
+export default new CylinderPage()

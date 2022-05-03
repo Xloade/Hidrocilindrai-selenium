@@ -1,6 +1,6 @@
 import Page from '../page'
 
-class LoginPage extends Page {
+class CylindersPage extends Page {
   get inputName () {
     return $('#name')
   }
@@ -31,12 +31,14 @@ class LoginPage extends Page {
 
   async createCylinder(name) {
     await this.btnAdd.click()
+    await this.inputName.setValue('filler')
     await this.inputName.setValue(name)
     await this.btnSubmit.click()
   }
 
   async changeLastCylinder(name) {
     await this.btnLastEdit.click()
+    await this.inputName.setValue('filler')
     await this.inputName.setValue(name)
     await this.btnSubmit.click()
   }
@@ -54,4 +56,4 @@ class LoginPage extends Page {
   }
 }
 
-export default new LoginPage()
+export default new CylindersPage()
